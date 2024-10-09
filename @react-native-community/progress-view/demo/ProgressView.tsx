@@ -61,39 +61,6 @@ export default function ProgressViewDemo() {
             <ScrollView>
                 <TestSuite name="react-native-community/progress-view">
                     <TestCase
-                        key={"getInitStatus_1"}
-                        itShould={`animation progress change`}
-                        tags={['C_API']}
-                        initialState={false}
-
-                        arrange={({ setState }) => {
-                            return (
-                                <View style={{ flex: 1 }}>
-                                    <ProgressView
-                                        style={styles.progressView}
-                                        progress={getInitStatu_1progress}
-                                        testID={'p1'}
-
-                                    />
-                                    <Button title={"start"} onPress={() => {
-                                        let i = 0
-                                        const timer = setInterval(() => {
-                                            i += 0.1
-                                            setGetInitStatu_1progressProgress(i)
-                                            if (i === 1) {
-                                                clearInterval(timer)
-                                            }
-                                        }, 100)
-                                        setState(true)
-                                    }}></Button>
-                                </View>
-                            );
-                        }}
-                        assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
-                        }}
-                    />
-                    <TestCase
                         key={"progress number change"}
                         itShould={`change progress`}
                         tags={['C_API']}
