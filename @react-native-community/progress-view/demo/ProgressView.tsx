@@ -95,7 +95,7 @@ export default function ProgressViewDemo() {
                     />
                     <TestCase
                         key={"getInitStatus_3"}
-                        itShould={`defalut progressTintColor purple color change color`}
+                        itShould={`default progressTintColor red color change color`}
                         tags={['C_API']}
                         initialState={false}
                         arrange={({ setState }) => {
